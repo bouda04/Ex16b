@@ -1,19 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.bouda04.ex16b.MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                tools:context="com.example.bouda04.ex16b.MainActivity" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:text="@string/intro" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/llShared"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/tvShared"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Shared Counter"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tvCountShared"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:background="@android:color/holo_orange_light"
+
+            android:text="0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/llShared"
+        android:layout_below="@+id/llShared"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/btBoth"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:onClick="startThem"
+            android:text="Start both counting threads" />
+
+    </LinearLayout>
+
+</RelativeLayout>
