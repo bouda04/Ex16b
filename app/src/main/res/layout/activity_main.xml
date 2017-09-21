@@ -2,7 +2,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="10dp"
+                android:padding="10dp"
                 tools:context="com.example.bouda04.ex16b.MainActivity" >
 
     <TextView
@@ -14,7 +14,7 @@
     <LinearLayout
         android:id="@+id/llShared"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="50dp">
 
@@ -29,13 +29,12 @@
         <TextView
             android:id="@+id/tvCountShared"
             android:layout_width="80dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:textSize="30sp"
-            android:layout_gravity="center_vertical"
+
             android:gravity="center"
             android:layout_marginLeft="50dp"
             android:background="@android:color/holo_orange_light"
-
             android:text="0" />
 
     </LinearLayout>
@@ -48,12 +47,20 @@
         android:layout_marginTop="50dp">
 
         <Button
-            android:id="@+id/btBoth"
+            android:id="@+id/btSynch"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:onClick="startThem"
-            android:text="Start both counting threads" />
+            android:text="Synchronized Counting" />
+
+        <Button
+            android:id="@+id/btNotSynch"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:onClick="startThem"
+            android:text="Unsynchronized Counting" />
 
     </LinearLayout>
 

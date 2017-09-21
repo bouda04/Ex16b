@@ -2,6 +2,6 @@
     <string name="app_name">Ex16b</string>
     <string name="intro">
         This application demonstrates the interaction between the UI main thread
-        and two \'workers\' thread that run in the background, while synchronizing with each other
+        and %1d \'workers\' thread that run in the background, and the effect of synchronizing or not synchronizing with each other
     </string>
 </resources>
